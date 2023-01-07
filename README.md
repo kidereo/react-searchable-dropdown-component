@@ -1,4 +1,7 @@
 # React Searchable Dropdown Component
+
+![Dropdown](dropdown.png "Dropdown presentation")
+
 ## About
 This component will enable you to add a custom dropdown component to your React application. 
 
