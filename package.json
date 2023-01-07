@@ -1,6 +1,6 @@
 {
   "name": "react-searchable-dropdown-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A searchable dropdown component for your React application.",
   "main": "index.js",
   "repository": {
