@@ -14,7 +14,7 @@ Amongst others, its key advantages include the ability to search your dropdown's
 Run `npm install react-searchable-dropdown-component`.
 
 ## Use
-1. Import the dropdown like so `import Dropdown from 'react-searchable-dropdown-component';`
+1. Import the dropdown like so `import {Dropdown} from 'react-searchable-dropdown-component';`
 1. Use the dropdown as you would any other React component. The dropdown accepts the following parameters:
 
         <Dropdown   placeHolder='Select State'

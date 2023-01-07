@@ -13,6 +13,7 @@
     "component",
     "searchable"
   ],
+  "author": "kidereo",
   "license": "ISC",
-  "homepage": "https://github.com/kidereo/react-searchable-dropdown-component.git"
+  "homepage": "https://github.com/kidereo/react-searchable-dropdown-component.git#readme"
 }
