@@ -3,7 +3,7 @@
 ![Dropdown](dropdown.png "Dropdown presentation")
 
 ## About
-This component will enable you to add a custom dropdown component to your React application. 
+This component will enable you to add a searchable dropdown selector to your React application. 
 
 Amongst others, its key advantages include the ability to search your dropdown's options, use your own up/down arrows, and update the parent component's state with either dropdown's key or value. 
 
@@ -68,7 +68,7 @@ Run `npm install react-searchable-dropdown-component`.
 `isSearchable` will enable your dropdown options to be search inside their `"key":"value"` pairs. A text input will appear just above all other options. This parameter is optional and can be omitted if not necessary.
 
 ### `parentElementStateSetter={wrapper}`
-`parentElementStateSetter` will enable you to capture dropdown state change in its parent component. This could be useful if you use this dropdown in a form, for example, to keep the form's state in one place.
+`parentElementStateSetter` enables you to capture dropdown state change in its parent component. This is especially useful when you use this dropdown in a form, for example, to keep the form's state in one place.
 
         const [homeState, setHomeState] = useState('');
         const wrapperSetHomeState = useCallback(value => {
