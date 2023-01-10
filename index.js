@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
-import './dropdown.css';
-import {IconArrowDown, IconArrowUp} from './svg-icons';
+import './assets/dropdown.css';
+import {IconArrowDown, IconArrowUp} from './assets/svg-icons';
 
 /**
  * Dropdown component.

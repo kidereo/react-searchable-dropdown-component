@@ -1,6 +1,6 @@
 # React Searchable Dropdown Component
 
-![Dropdown](dropdown.png "Dropdown presentation")
+![Dropdown](./assets/dropdown.png "Dropdown presentation")
 
 ## About
 This component will enable you to add a searchable dropdown selector to your React application. 
@@ -12,16 +12,18 @@ Amongst others, its key advantages include the ability to search your dropdown's
 - [npm](https://www.npmjs.com/).
 - Naturally, you will need to be building a [React](https://reactjs.org/) application as the dropdown relies on a number of React imports.
 
-
 ## Installation 
 Run `npm install react-searchable-dropdown-component`.
 
 ## Use
-1. Import the dropdown like so `import {Dropdown} from 'react-searchable-dropdown-component';`
+1. Import the dropdown:
+
+    `import {Dropdown} from 'react-searchable-dropdown-component';`
+    
 1. Use the dropdown as you would any other React component. The dropdown accepts the following parameters:
 
         <Dropdown   placeHolder='Select State'
-                    options={stateList}
+                    options={useStates}
                     arrowDown={<ArrowDropDownOutlinedIcon/>}
                     arrowUp={<ArrowDropUpOutlinedIcon/>}
                     isSearchable
@@ -34,7 +36,7 @@ Run `npm install react-searchable-dropdown-component`.
 ## Available APIs
 
 ### `placeHolder='string'`
-`placeHolder` describes dropdown's purpose in its furled state. You can omit this parameter if you wish but then it will become difficult to understand its purpose.
+`placeHolder` appears on the dropdown's first load in its furled state as a cue to what this selector is about.
 
 ### `options={array}`
 `options` accept an array of json `"key":"value"` pairs:
@@ -65,7 +67,7 @@ Run `npm install react-searchable-dropdown-component`.
         />
 
 ### `isSearchable`
-`isSearchable` will enable your dropdown options to be search inside their `"key":"value"` pairs. A text input will appear just above all other options. This parameter is optional and can be omitted if not necessary.
+`isSearchable` will enable your dropdown options to be searched inside their `"key":"value"` pairs. A text input will appear just above all other options. This parameter is optional.
 
 ### `parentElementStateSetter={wrapper}`
 `parentElementStateSetter` enables you to capture dropdown state change in its parent component. This is especially useful when you use this dropdown in a form, for example, to keep the form's state in one place.
@@ -81,6 +83,28 @@ Run `npm install react-searchable-dropdown-component`.
 
 ### `persistKey`
 By default, `parentElementStateSetter` will return `value` of the `"key":"value"` pair to its parent component. `persistKey` will enable you to pass `key` instead. 
+
+## Troubleshooting
+
+If your React project was created with the [Create React App](https://create-react-app.dev/), you may be faced with a Babel error such as `Support for the experimental syntax 'jsx' isn't currently enabled`. This happens because Babel processes JS inside and outside of the app (i.e. its `src` directory) differently. If you encounter this error, rest assured that it is not a fault of the dropdown component itself.
+
+To remedy the error:
+1. Create `babel.config.json` file in the root of your project and add the following block of code to it:
+
+        {
+          "presets": [
+            "@babel/preset-env",
+            [
+              "@babel/preset-react",
+              {
+                "runtime": "automatic"
+              }
+            ]
+          ]
+        }
+
+2. Locate `webpack.config.js` file in the `./node_modules/react-scripts/config/` directory. On line `474` (at the time of writing this document) change `configFile: false` to `configFile:true`. This will tell Babel to use the config file created in the step above.
+3. Restart your app server to make sure configuration changes are applied. 
 
 ## License
 [ISC Open Source Software License](https://www.isc.org/licenses/)
