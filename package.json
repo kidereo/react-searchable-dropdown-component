@@ -1,6 +1,6 @@
 {
   "name": "react-searchable-dropdown-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A searchable dropdown component for your React application.",
   "main": "index.js",
   "repository": {
@@ -11,7 +11,8 @@
     "React",
     "dropdown",
     "component",
-    "searchable"
+    "searchable",
+    "ui"
   ],
   "author": "kidereo",
   "license": "ISC",

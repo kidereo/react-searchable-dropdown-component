@@ -7,6 +7,9 @@ This component will enable you to add a searchable dropdown selector to your Rea
 
 Amongst others, its key advantages include the ability to search your dropdown's options, use your own up/down arrows, and update the parent component's state with either dropdown's key or value. 
 
+**Note:** If your React project was initiated with [Create React App](https://create-react-app.dev/), you are better off installing [react-app-searchable-dropdown-component](https://www.npmjs.com/package/react-app-searchable-dropdown-component) instead to avoid a possible Babel error.
+
+
 ## Prerequisites
 - [NodeJS](https://nodejs.org/en/).
 - [npm](https://www.npmjs.com/).
@@ -86,9 +89,11 @@ By default, `parentElementStateSetter` will return `value` of the `"key":"value"
 
 ## Troubleshooting
 
-If your React project was created with the [Create React App](https://create-react-app.dev/), you may be faced with a Babel error such as `Support for the experimental syntax 'jsx' isn't currently enabled`. This happens because Babel processes JS inside and outside of the app (i.e. its `src` directory) differently. If you encounter this error, rest assured that it is not a fault of the dropdown component itself.
+If your React project was initiated with [Create React App](https://create-react-app.dev/), you may be faced with a Babel error such as `Support for the experimental syntax 'jsx' isn't currently enabled`. This happens because Babel processes JS inside and outside of the app (i.e. its `src` directory) differently. If you encounter this error, rest assured that it is not a fault of the dropdown component itself.
 
-To remedy the error:
+There exists a precompiled version of this dropdown - [react-app-searchable-dropdown-component](https://www.npmjs.com/package/react-app-searchable-dropdown-component) - for projects kicked off with Create React App which does not produce this error. Simply alternate these components in your projects.
+
+To remedy the error manually:
 1. Create `babel.config.json` file in the root of your project and add the following block of code to it:
 
         {
